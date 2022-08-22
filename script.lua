@@ -1,4 +1,4 @@
---		  JJJJJJJJJJJ  iiii                                                    tttt                                                  	 
+--	 	  JJJJJJJJJJJ  iiii                                                    tttt                                                  	 
 --	          J:::::::::J i::::i                                                ttt:::t                                                  	 
 --	          J:::::::::J  iiii                                                 t:::::t                                                  	 
 --	          JJ:::::::JJ                                                       t:::::t                                                  	 
@@ -17,21 +17,31 @@
 
 local TimeUI = script.Parent
 
-local irlHour = os.date("t")["hour"]
-local irlMin = os.date("t")["min"]
+--while true do 
+--	if os.date("*t").hour > 12 then 
+--		TimeUI.Text = os.date("*t").hour-12 ..":" .. os.date("*t").min .."PM" 
+--	else --Else, meaning if it ISN'T >12
+--		TimeUI.Text = os.date("*t").min ..":" .. os.date("*t").min 
+--	end -- ends the if function
 
-while true do
-	if irlHour > 12 then
-		if irlMin < 10 then
-			TimeUI.Text = os.date("*t")["hour"]-12 ..":0" .. os.date("*t")["min"] .."PM"
+--	wait(5)
+--end
+
+
+while true do 
+	if os.date("*t").hour > 12 then 
+		wait(1)
+		if os.date("*t").min > 10 then
+			TimeUI.Text = os.date("*t").hour-12 ..":" .. os.date("*t").min .."PM" 
 		else
-			TimeUI.Text = os.date("*t")["hour"]-12 ..":" .. os.date("*t")["min"] .."PM"
+			TimeUI.Text = os.date("*t").hour-12 ..":0" .. os.date("*t").min .."PM" 
 		end
-	else
-		if irlMin  < 10 then
-			TimeUI.Text = os.date("*t")["hour"] ..":0" .. os.date("*t")["min"]
+	else 
+		wait(1)
+		if os.date("*t").min > 10 then
+			TimeUI.Text = os.date("*t").min ..":" .. os.date("*t").min 
 		else
-			TimeUI.Text = os.date("*t")["hour"] ..":" .. os.date("*t")["min"]
+			TimeUI.Text = os.date("*t").min ..":0" .. os.date("*t").min 
 		end
 	end
 
