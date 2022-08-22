@@ -20,9 +20,9 @@ local TimeUI = script.Parent
 local irlHour = os.date("t")["hour"]
 
 while true do
-	if irlHour > 12 then
+	if irlHour = > 12 then
 		TimeUI.Text = os.date("*t")["hour"]-12 ..":" .. os.date("*t")["min"] .."PM"
-	else
+	elseif irlHour = < 12
 		TimeUI.Text = os.date("*t")["hour"] ..":" .. os.date("*t")["min"]
 	end
 
