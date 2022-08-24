@@ -17,17 +17,6 @@
 
 local TimeUI = script.Parent
 
---while true do 
---	if os.date("*t").hour > 12 then 
---		TimeUI.Text = os.date("*t").hour-12 ..":" .. os.date("*t").min .."PM" 
---	else --Else, meaning if it ISN'T >12
---		TimeUI.Text = os.date("*t").min ..":" .. os.date("*t").min 
---	end -- ends the if function
-
---	wait(5)
---end
-
-
 while true do 
 	if os.date("*t").hour > 12 then 
 		wait(1)
