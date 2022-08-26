@@ -18,21 +18,8 @@
 local Clock = script.Parent
 
 while true do 
-	if os.date("*t").hour > 12 then 
-		wait(1)
-		if os.date("*t").min > 10 then
-			TimeUI.Text = os.date("*t").hour-12 ..":" .. os.date("*t").min .."PM" 
-		else
-			Clock.Minute.Rotation = 
-		end
-	else 
-		wait(1)
-		if os.date("*t").min > 10 then 
-			TimeUI.Text = os.date("*t").min ..":" .. os.date("*t").min 
-		else
-			TimeUI.Text = os.date("*t").min ..":0" .. os.date("*t").min 
-		end
-	end
-
-	wait(5)
+	Clock.Min.Rotation = os.date("*t").min * 6
+	Clock.hour.Rotation = os.date("*t").hour * 6
+	Clock.sec.Rotation = os.date("*t").sec * 6
+	wait(1)
 end
