@@ -14,7 +14,7 @@
 ]]
 
 
-local SecondsEnabled == false
+local SecondsEnabled = false
 
 
 
